@@ -48,9 +48,9 @@
       </nav>
       <nav id="sub-nav">
         
-          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="Flux RSS"></a>
         
-        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+        <a id="nav-search-btn" class="nav-icon" title="Rechercher"></a>
       </nav>
       <div id="search-form-wrap">
         <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
@@ -60,44 +60,6 @@
 </header>
       <div class="outer">
         <section id="main">
-  
-    <article id="post-My-new-Post" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2017/09/04/My-new-Post/" class="article-date">
-  <time datetime="2017-09-04T12:57:30.000Z" itemprop="datePublished">2017-09-04</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/09/04/My-new-Post/">My new Post</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>#This is my first hexo blog<br>i will learn it soon</p>
-<p>##fine day!</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/09/04/My-new-Post/" data-id="cj766sh6y0001v4udpixxq1d2" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
   
     <article id="post-hello-world" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
@@ -134,65 +96,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/09/04/hello-world/" data-id="cj766sh710002v4ud3mandp9o" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-Week5  Lasso Regression" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2014/08/05/Week5  Lasso Regression/" class="article-date">
-  <time datetime="2014-08-05T03:15:00.000Z" itemprop="datePublished">2014-08-05</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2014/08/05/Week5  Lasso Regression/">Week5 Lasso Regression</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>#<strong>1.Feature selection</strong></p>
-<p>##<strong>1)All subsets</strong><br>$$ \hat w=(w_1,w_2…w_D) $$<br>    每一个特征都有可能包含或者不包含共有$2^D$种情况，即穷举所有可能的model</p>
-<p>##<strong>2)Greedy algorithms</strong></p>
-<p>###Forward stepwise algorithm<br> &nbsp;&nbsp;&nbsp;&nbsp;从0特征开始，每次增加一个特征（保留之前的结果）<br>&nbsp;&nbsp;&nbsp; $第一次D选1$<br>&nbsp;&nbsp;&nbsp; $第二次剩余的(D-1)中选1$<br>&nbsp;&nbsp;&nbsp;&nbsp;$……$<br>&nbsp;&nbsp;&nbsp;&nbsp;$……$<br>&nbsp;&nbsp;&nbsp;&nbsp;$复杂度O(D^2)$<br>用<strong>validation_set</strong>(数据量较小时需要<strong>cross validation</strong>)计算    ，直到     是停止算法。</p>
-<p>##<strong>3)Regularize</strong></p>
-<p>###<strong>Ridge</strong> regression($L_2$regularized regression)<br>$$Totol　cost=RSS(\hat w)+\lambda||w||_2^2$$<br>　　<strong>L2 encourage $\hat w$ to be small(close to but not 0)</strong></p>
-<p>###<strong>Lasso</strong> regression($L_1$regularized regression)</p>
-<p><img src="http://img.blog.csdn.net/20170902212751310?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvcXFfMjI3MTM0ODc=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt=""></p>
-<p>$$Totol　cost=RSS(\hat w)+\lambda||w||_1$$<br>　　<strong>L1 sparse $\hat w$ (some  of $\hat w$ be exactly 0)</strong><br>　　<br>　　【注意】<strong>lasso的$||w||_1$是不含$w_0$</strong>的，因为lasso是sparse（缩减有效w个数，即使一部分w为0），而我们不希望intercept也为0，故不含$w_0$<br>　　－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－-<br>　　由于L1 norm是不可导的，故Lasso不能像Ridge一样采用Gradient Decent算法，而应采用Subgradient Decent算法：<br>　　<img src="http://img.blog.csdn.net/20170902205142213?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvcXFfMjI3MTM0ODc=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt=""></p>
-<p>##<strong>Coodinate descent</strong></p>
-<p>###1)feature matrix可以先normalize(归一化)<br><img src="http://img.blog.csdn.net/20170902210107009?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvcXFfMjI3MTM0ODc=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt=""><br>【注意】归一化针对每一个$w_j$而言，即一列一列的归一化。归一化相当于将feature matrix / norms ； 对结果weights即$\hat w$而言相当于乘以了norms，这样才能保证$$predictions=np.dot(FeatureMatrix，weights)$$</p>
-<p>###2)Lasso的结果<br><img src="http://img.blog.csdn.net/20170902210732262?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvcXFfMjI3MTM0ODc=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt=""></p>
-<p>###3)Lasso的代码（Cyclical coordinate descent）</p>
-<p>####<strong>coodinate</strong>(指一次处理一个） descent是固定其他w参数而变更$w_i$：<br><strong>更新$w_i$的算法：</strong></p>
-<p><img src="http://img.blog.csdn.net/20170902211102149?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvcXFfMjI3MTM0ODc=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt=""></p>
-<p>####<strong>For each iteration:</strong></p>
-<p>####1）As you loop over features in order and perform coordinate descent, measure how much each coordinate changes.</p>
-<p>####2）After the loop, if the maximum change across all coordinates is falls below the tolerance, stop. Otherwise, go back to step 1.<br><img src="http://img.blog.csdn.net/20170902211153622?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvcXFfMjI3MTM0ODc=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt=""></p>
-<p>##<strong>4)Lasso和Ridge的区别</strong>(待补充）<br><strong>lasso是sparse会将一部分w舍弃(置为0，所以是feature selection）</strong>，而ridge使w趋近0但不会为0</p>
-<p>###为什么lasso可以将w置0，而ridge不行？<br>从几何图形上可以理解;<br><img src="http://img.blog.csdn.net/20170902221943930?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvcXFfMjI3MTM0ODc=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt=""><br>如上图为两特征的$\hat w=(w_0，w_1)$示例，solution处$w_0$为0<br><img src="http://img.blog.csdn.net/20170902221959518?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvcXFfMjI3MTM0ODc=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt=""><br>ridge的solution为椭圆与圆相切的点，很明显不能使$w_0$或者$w_1$为0<br>以ridge为例，对某一个特定$\lambda$取solution的过程如下：<br><img src="http://img.blog.csdn.net/20170902222758360?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvcXFfMjI3MTM0ODc=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt=""></p>
-<p>###then，<br><img src="http://img.blog.csdn.net/20170902222813907?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvcXFfMjI3MTM0ODc=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt=""></p>
-<p>####所有可能的椭圆和圆相切的地方中存在使cost最小的点即solution解。对于不同的$\lambda$得到不同的解$\hat w$，之后再中通过test_data来评价</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2014/08/05/Week5  Lasso Regression/" data-id="cj766sh6s0000v4udfrhpksru" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2017/09/04/hello-world/" data-id="cj766z04p0000w8ude2nlp4dq" class="article-share-link">Partager</a>
       
       
     </footer>
@@ -219,7 +123,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Archives</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/09/">September 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/08/">August 2014</a></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/09/">September 2017</a></li></ul>
     </div>
   </div>
 
@@ -227,20 +131,12 @@
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Recent Posts</h3>
+    <h3 class="widget-title">Articles récents</h3>
     <div class="widget">
       <ul>
         
           <li>
-            <a href="/2017/09/04/My-new-Post/">My new Post</a>
-          </li>
-        
-          <li>
             <a href="/2017/09/04/hello-world/">Hello World</a>
-          </li>
-        
-          <li>
-            <a href="/2014/08/05/Week5  Lasso Regression/">Week5 Lasso Regression</a>
           </li>
         
       </ul>
@@ -256,7 +152,7 @@
   <div class="outer">
     <div id="footer-info" class="inner">
       &copy; 2017 MZX<br>
-      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+      Propulsé by <a href="http://hexo.io/" target="_blank">Hexo</a>
     </div>
   </div>
 </footer>
